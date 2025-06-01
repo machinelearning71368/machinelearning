@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Subjects - Math & Physics</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .subject {
+      flex: 1;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    .math {
+      background-image: url('math.jpg');
+    }
+
+    .physics {
+      background-image: url('physics.jpg');
+    }
+
+    .overlay-box {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      width: 70%;
+      transition: transform 0.3s ease;
+    }
+
+    .overlay-box:hover {
+      transform: scale(1.05);
+    }
+
+    .subject h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .subject p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+
+    .subject button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #ff9800;
+      border: none;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .subject button:hover {
+      background-color: #e68900;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="subject math">
+      <div class="overlay-box">
+        <h1>Mathematics</h1>
+        <p>“Pure mathematics is, in its way, the poetry of logical ideas.” – Albert Einstein</p>
+        <!-- Mathematics Button -->
+<button onclick="window.location.href='math.html'">Explore Mathematics</button>
+
+      </div>
+    </div>
+    <div class="subject physics">
+      <div class="overlay-box">
+        <h1>Physics</h1>
+        <p>“Physics is not about making things complicated. It’s about understanding how the universe works.”</p>
+<!-- Physics Button -->
+<button onclick="window.location.href='physics.html'">Explore Physics</button>
+    </div>
+    </div>
+  </div>
+</body>
+</html>
